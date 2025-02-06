@@ -14,7 +14,7 @@ function Main() {
           </div>
   
           <div className="mbti-card">
-            <h2>우리 댕댕이의 멍BT는?!</h2>
+            <h2>우리 댕댕이의 멍BTI는?!</h2>
           </div>
   
           <div className="info-grid">
