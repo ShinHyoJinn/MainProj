@@ -22,7 +22,7 @@ const TemporaryCare = () => {
       </header>
 
       <main className="main-content">
-        <button className="matching-button">당신과 잘맞인 강아지 맞춤추천</button>
+        <button className="matching-button">당신과 찰떡인 강아지 맞춤추천</button>
 
         <div className="dogs-grid">
           {dogs.map((dog, index) => (

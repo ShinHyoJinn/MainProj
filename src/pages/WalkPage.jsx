@@ -1,12 +1,12 @@
-import React from "react";
-import Walk from "../components/Walk/index"; // `index.jsx`를 명확하게 지정
+import React from 'react'
+import Walk from '../components/Walk'
 
 function WalkPage() {
   return (
     <div>
-      <Walk />
+      <Walk/>
     </div>
-  );
+  )
 }
 
 export default WalkPage

@@ -1,67 +1,73 @@
 /* 전체 컨테이너 스타일 */
 .temporary-care {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  overflow: hidden;
+  background-color: #e8eae8;
+  min-height: 100vh;
+  box-sizing: border-box;
+  overflow-x: hidden; /* 좌우 스크롤 방지 */
 }
 
 /* 헤더 스타일 */
-.care-header {
+.header {
   background-color: #ffffff;
-  padding: 60px 20px 16px;
-  position: sticky;
-  top: 0;
-  z-index: 10;
+  padding: 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* 뒤로가기 버튼 스타일 */
+/* 헤더 내용 스타일 */
+.header-content {
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* 뒤로 가기 버튼 스타일 */
 .back-button {
   background: none;
   border: none;
+  font-size: 24px;
   cursor: pointer;
-  padding: 0;
-  margin-bottom: 16px;
-  display: inline-block;
+  padding: 8px;
+  align-self: flex-start;
 }
 
-/* 헤더 내용 컨테이너 */
-.header-content {
-  padding-left: 4px;
+/* 제목과 설명 컨테이너 스타일 */
+.title-description {
+  margin-top: 16px;
 }
 
 /* 제목 스타일 */
-.care-title {
-  font-size: 22px;
-  font-weight: bold;
-  margin-bottom: 8px;
-  color: #000000;
+.title-description h1 {
+  margin: 0 0 16px 0;
+  font-size: 24px;
 }
 
 /* 설명 텍스트 스타일 */
-.care-description {
-  color: #565656;
-  font-size: 15px;
-  line-height: 1.6;
+.description {
+  margin: 0;
+  color: #666;
+  line-height: 1.5;
 }
 
 /* 메인 컨텐츠 영역 스타일 */
-.care-content {
-  flex: 1;
-  overflow-y: auto;
-  background-color: #e8eae8;
-  padding: 24px;
+.main-content {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-/* 강아지 카드 그리드 레이아웃 */
+/* 강아지 카드 그리드 스타일 */
 .dogs-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 500px)); /* 각 열의 최대 너비 500px로 제한 */
-  gap: 10px 40px; /* 세로 간격 24px, 가로 간격 40px */
-  justify-content: center; /* 그리드를 중앙 정렬 */
-  width: 100%;
-  max-width: 1040px; /* 최대 너비 설정 (500px * 2 + 40px 간격) */
-  margin: 0 auto;
+  grid-template-columns: repeat(2, 1fr); /* 2x2 그리드 */
+  gap: 16px;
+  padding: 20px;
+}
+
+/* 반응형 디자인을 위한 미디어 쿼리 */
+@media (max-width: 768px) {
+  .dogs-grid {
+    grid-template-columns: 1fr; /* 작은 화면에서는 한 열로 표시 */
+  }
 }
 
