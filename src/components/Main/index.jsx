@@ -1,8 +1,11 @@
-import "./Main.css"
+import "./Main.css";
+import { useNavigate } from "react-router-dom";
 
 function Main() {
+  const navigate = useNavigate();
+
   return (
-    <div className="main-container" style={{minHeight: '100%', overflowY: 'auto'}}>
+    <div className="main-container" style={{ minHeight: '100%', overflowY: 'auto' }}>
       <header>
         <h1>
           <img src="/mainicons/logo.png" alt="로고" className="main-logo" />
@@ -19,7 +22,7 @@ function Main() {
         </div>
 
         <div className="main-info-grid">
-          <div className="main-info-card">
+          <div className="main-info-card" onClick={() => navigate("/WalkPage")}> {/* 산책 카드 클릭 시 이동 */}
             <h3>산책</h3>
             <p>GPS 경로로 함께</p>
             <p>산책 로드 확인</p>
@@ -40,8 +43,7 @@ function Main() {
         </div>
       </main>
     </div>
-  )
+  );
 }
 
-export default Main
-
+export default Main;
