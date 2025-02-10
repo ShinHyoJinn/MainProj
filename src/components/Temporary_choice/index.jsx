@@ -1,7 +1,6 @@
-"use client"
+"use client";
 
 import { useState } from "react";
-import { ArrowLeft } from "lucide-react";
 import "./Temporary_choice.css";
 
 export default function Temporary_Choice({ dog }) {
@@ -12,8 +11,15 @@ export default function Temporary_Choice({ dog }) {
   return (
     <div className="temporary-choice-temporary-choice">
       <header className="temporary-choice-header">
-        <button className="temporary-choice-back-button" onClick={() => window.history.back()}>
-          <ArrowLeft size={24} />
+        <button
+          className="temporary-choice-back-button"
+          onClick={() => window.history.back()}
+        >
+          <img
+            src="/icons/back.png"
+            alt="뒤로가기"
+            className="temporary-choice-back-icon"
+          />
         </button>
       </header>
 

@@ -6,9 +6,10 @@ import ProfilePage from './pages/ProfilePage';
 import LoginPage from './pages/LoginPage'
 import TemporaryCarePage from './pages/TemporaryCarePage'
 import TemporaryCare_RePage from './pages/TemporaryCare_RePage'
-import Temporary_choicePage from './pages/Temporary_choicePage'
+import Temporary_choicePage from './pages/Temporary_choicePage';
 import WalkPage from './pages/WalkPage'
 import Walk2Page from './pages/Walk2Page'
+import Walk3Page from './pages/Walk3Page'
 import LivePage from './pages/LivePage';
 import LikePage from './pages/LikePage';
 import ReservationPage from './pages/ReservationPage';
@@ -34,6 +35,7 @@ function App() {
         <Route path="/Temporary_choicePage" element={<Temporary_choicePage/>} />
         <Route path="/WalkPage" element={<WalkPage/>} />
         <Route path="/Walk2Page" element={<Walk2Page/>} />
+        <Route path="/Walk3Page" element={<Walk3Page/>} />
         <Route path="/LivePage" element={<LivePage/>} />
         <Route path="/LikePage" element={<LikePage/>} />
         <Route path="/ReservationPage" element={<ReservationPage/>} />

@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import DogCard from "../Dog";
 import "./TemporaryCare_Re.css";
@@ -40,11 +40,17 @@ const TemporaryCare_Re = () => {
     <div className="TemporaryCare_Re-temporary-care">
       <header className="TemporaryCare_Re-header">
         <div className="TemporaryCare_Re-header-content">
-          <button className="TemporaryCare_Re-back-button">←</button>
+          <button className="TemporaryCare_Re-back-button">
+            <img
+              src="/icons/back.png"
+              alt="뒤로가기"
+              className="TemporaryCare_Re-back-icon"
+            />
+          </button>
           <div className="TemporaryCare_Re-title-description">
             <h1>맞춤추천</h1>
             <p className="TemporaryCare_Re-description">
-              당신의 마음과 맞는 상아지를 찾아보세요
+              당신의 마음과 맞는 강아지를 찾아보세요
               <br />
               특별한 인연을 맺고, 함께 행복한 추억을 만들어가요!
             </p>

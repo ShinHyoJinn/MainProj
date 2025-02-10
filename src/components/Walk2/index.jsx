@@ -10,7 +10,16 @@ export default function Walk2() {
       {/* Header and Input Section */}
       <div className="Walk2-white-section">
         <div className="Walk2-header">
-          <button className="Walk2-back-button" onClick={() => navigate("/WalkPage")}>←</button>
+          <button
+            className="Walk2-back-button"
+            onClick={() => navigate("/WalkPage")}
+          >
+            <img
+              src="/icons/back.png"
+              alt="뒤로가기"
+              className="Walk2-back-icon"
+            />
+          </button>
           <h1 className="Walk2-title">
             어디로
             <br />
@@ -21,12 +30,22 @@ export default function Walk2() {
           <label htmlFor="address" className="Walk2-input-label">
             주소
           </label>
-          <input type="text" id="address" className="Walk2-input-field" placeholder="주소를 입력해주세요" />
+          <input
+            type="text"
+            id="address"
+            className="Walk2-input-field"
+            placeholder="주소를 입력해주세요"
+          />
 
           <label htmlFor="contact" className="Walk2-input-label">
             연락처
           </label>
-          <input type="text" id="contact" className="Walk2-input-field" placeholder="연락처를 입력해주세요" />
+          <input
+            type="text"
+            id="contact"
+            className="Walk2-input-field"
+            placeholder="연락처를 입력해주세요"
+          />
         </div>
       </div>
 

@@ -1,15 +1,27 @@
-"use client"
+"use client";
 
+import { useNavigate } from "react-router-dom"; // useNavigate를 올바르게 가져옵니다.
 import DogCard from "../Dog";
 import "./TemporaryCare.css";
 import { dogs } from "../../app/data";
 
 const TemporaryCare = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="TemporaryCare-temporary-care">
       <header className="TemporaryCare-header">
         <div className="TemporaryCare-header-content">
-          <button className="TemporaryCare-back-button">←</button>
+          <button 
+            className="TemporaryCare-back-button"
+            onClick={() => navigate("/")}
+          >
+            <img 
+              src="/icons/back.png" 
+              alt="뒤로가기" 
+              className="TemporaryCare-back-icon" 
+            />
+          </button>
           <div className="TemporaryCare-title-description">
             <h1>임시 보호</h1>
             <p className="TemporaryCare-description">
@@ -22,7 +34,9 @@ const TemporaryCare = () => {
       </header>
 
       <main className="TemporaryCare-main-content">
-        <button className="TemporaryCare-matching-button">당신과 찰떡인 강아지 맞춤추천</button>
+        <button className="TemporaryCare-matching-button">
+          당신과 찰떡인 강아지 맞춤추천
+        </button>
 
         <div className="dogs-grid">
           {dogs.map((dog, index) => (
