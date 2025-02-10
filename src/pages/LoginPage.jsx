@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-import React from 'react'
-import Login from '../components/Login'
-
-function LoginPage() {
-  return (
-    <div>
-      <Login/>
-    </div>
-  )
-}
-
-export default LoginPage
-=======
 import React from 'react'
 import Login from '../components/Login'
 
@@ -24,4 +10,3 @@ function LoginPage() {
 }
 
 export default LoginPage
->>>>>>> other/main

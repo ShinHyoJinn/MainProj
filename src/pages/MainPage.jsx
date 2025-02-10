@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-import React from 'react'
-import Main from '../components/Main'
-
-function ResultLast() {
-  return (
-    <div>
-      <Main/>
-    </div>
-  )
-}
-
-export default ResultLast
-=======
 import React from 'react'
 import Main from '../components/Main'
 import BottomNavigation from '../components/BottomNavigation'
@@ -28,4 +14,3 @@ function MainPage() {
 }
 
 export default MainPage
->>>>>>> other/main
