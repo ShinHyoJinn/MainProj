@@ -1,4 +1,5 @@
 "use client";
+
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Walk.css";
@@ -10,7 +11,7 @@ const walkOptions = [
 ];
 
 export default function Walk() {
-  const [selectedDuration, setSelectedDuration] = useState(30);
+  const [selectedDuration, setSelectedDuration] = useState(30); // 기본 선택 30분
   const [wantToday, setWantToday] = useState(false);
   const navigate = useNavigate();
 
@@ -71,16 +72,23 @@ export default function Walk() {
 
         <div className="Walk-time-options">
           {walkOptions.map(({ duration, price }) => (
-            <button
-              key={duration}
-              className={`Walk-time-option ${
-                selectedDuration === duration ? "Walk-selected" : ""
-              }`}
-              onClick={() => handleDurationSelect(duration)}
-            >
-              <span className="Walk-duration">{duration}분</span>
-              <span className="Walk-price">{price.toLocaleString()}원~</span>
-            </button>
+            <div key={duration} className="Walk-time-option-wrapper">
+              <button
+                className={`Walk-time-option ${
+                  selectedDuration === duration ? "Walk-selected" : ""
+                }`}
+                onClick={() => handleDurationSelect(duration)}
+              >
+                {duration}분
+              </button>
+              <span
+                className={`Walk-price ${
+                  selectedDuration === duration ? "selected-price" : ""
+                }`}
+              >
+                {price.toLocaleString()}원~
+              </span>
+            </div>
           ))}
         </div>
       </div>

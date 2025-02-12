@@ -27,8 +27,7 @@
 .Walk-info-section {
   display: flex;
   justify-content: space-between;
-  align-items: stretch;
-  margin-bottom: 0;
+  align-items: center;
   text-align: center;
   position: relative;
   padding-bottom: 20px;
@@ -51,13 +50,13 @@
   color: #333;
 }
 
+/* ✅ 선 길이 더 늘림 */
 .Walk-divider {
   width: 1px;
   background-color: #e0e0e0;
-  margin: 0 20px;
   position: absolute;
-  top: 0;
-  bottom: 0;
+  top: 10%;
+  bottom: 10%;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -84,41 +83,55 @@
   color: #666;
 }
 
+/* ✅ 시간 선택 버튼 스타일 */
 .Walk-time-options {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  justify-content: space-between;
   gap: 15px;
 }
 
 .Walk-time-option {
-  border: 1px solid #e0e0e0;
-  border-radius: 50%;
-  width: 100px;
-  height: 100px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  background: none;
+  justify-content: center;
   cursor: pointer;
-  padding: 0;
-  transition: all 0.2s ease;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 2px solid #e0e0e0;
+  background-color: white;
+  font-weight: bold;
+  transition: all 0.3s ease;
 }
 
-.Walk-time-option.Walk-selected {
+/* ✅ 기본 색상 */
+.Walk-time-option span {
+  font-weight: bold;
+  color: #565656;
+}
+
+/* ✅ 선택한 옵션 변경 */
+.Walk-time-option.selected {
   background-color: #006400;
-  color: white;
   border-color: #006400;
 }
 
-.Walk-duration {
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 5px;
+.Walk-time-option.selected span {
+  color: #000000;
 }
 
+/* ✅ 가격 텍스트 */
 .Walk-price {
   font-size: 14px;
+  color: #565656;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* ✅ 선택된 가격 스타일 */
+.Walk-time-option.selected + .Walk-price {
+  color: #000000;
 }
 
 .Walk-bottom-section {
@@ -189,6 +202,7 @@
   font-size: 14px;
 }
 
+/* ✅ 다음으로 버튼 */
 .Walk-next-button {
   background-color: #006400;
   color: white;
